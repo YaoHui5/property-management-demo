@@ -16,37 +16,31 @@ import java.util.List;
 @RequestMapping("/hello")
 public class ApplicantController {
 
-    //自动注入接口
     @Autowired
     private ApplicantService applicantService;
 
-    //获取所有申请人信息
-    @GetMapping("/applicant")
+    @GetMapping("/list")
     public List<Applicant> getAllApplicant(){
         return applicantService.getAll();
     }
 
-    //添加申请人
-    @PostMapping("/applicant")
+    @PostMapping("/add")
     public void addApplicant(@RequestBody Applicant applicant){
         applicantService.addApplicant(applicant);
     }
 
-    //根据Id获取申请人信息
-    @GetMapping("/applicant/{id}")
+    @GetMapping("/get")
     public Applicant getApplicantById(@PathVariable("id") int id){
         return applicantService.getApplicantById(id);
     }
 
-    //根据Id更新申请人信息
-    @PostMapping("/applicant/{id}")
+    @PostMapping("/update")
     public void updateApplicantById(@PathVariable("id")int id,@RequestBody Applicant applicant){
         applicant.setId(id);
         applicantService.updateApplicantById(applicant);
     }
 
-    //根据Id删除申请人信息
-    @GetMapping("")
+    @GetMapping("/delete")
     public void deleteApplicant(@PathVariable("id") int id){
         applicantService.deleteApplicantById(id);
     }
