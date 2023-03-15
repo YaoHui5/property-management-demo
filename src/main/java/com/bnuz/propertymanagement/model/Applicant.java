@@ -1,5 +1,12 @@
 package com.bnuz.propertymanagement.model;
 
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+
+//@Repository
+@Component
 public class Applicant {
 
     private int id;

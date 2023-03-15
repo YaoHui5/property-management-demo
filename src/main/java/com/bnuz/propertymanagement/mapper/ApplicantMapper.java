@@ -2,9 +2,12 @@ package com.bnuz.propertymanagement.mapper;
 
 import com.bnuz.propertymanagement.model.Applicant;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 @Mapper
 public interface ApplicantMapper {
 
@@ -17,6 +20,7 @@ public interface ApplicantMapper {
     //根据申请人id更新申请人信息
     public void updateById(Applicant applicant);
 
+    @Select("select * from applicant")
     //查询所有申请人的信息
     public List<Applicant> getAll();
 

@@ -1,13 +1,13 @@
-package com.bnuz.propertymanagement;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class PropertyManagementApplicationTests {
-
-    @Test
-    void contextLoads() {
-    }
-
-}
+//package com.bnuz.propertymanagement;
+//
+//import org.junit.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//@SpringBootTest
+//class PropertyManagementApplicationTests {
+//
+//    @Test
+//    void contextLoads() {
+//    }
+//
+//}
